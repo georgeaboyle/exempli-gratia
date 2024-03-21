@@ -10,10 +10,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    // This is in case of a stand-alone release
+    // For full release if needed
 
-    //public void QuitGame ()
-    //{
-    //    Application.Quit();
+    // public void QuitGame ()
+    // {
+    //Application.Quit();
+
     //}
 }
