@@ -28,9 +28,12 @@ public class PlayerController : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 100, clickableMask))
+            if (Physics.Raycast(ray, out hit, 1000, clickableMask))
             {
+                //Vector3 mousePos = Input.mousePosition;
+                //mousePos = cam.ScreenToWorldPoint(mousePos);
                 Debug.Log("We hit" + hit.collider.name + " " + hit.point);
+                //Debug.DrawRay(transform.position, mousePos - transform.position, Color.blue);
 
                 // Focus/select object
 
