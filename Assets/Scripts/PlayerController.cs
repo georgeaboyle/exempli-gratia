@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -19,6 +18,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // This is to prevent clicking through the inventory UI
+
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+
+
         //Brackeys put this here for movement, then copied the code later for interactable
         //I'm going to leave this in for now because my brain is breaking
         //I'll come back later and clean up this code (I promise)
