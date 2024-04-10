@@ -20,8 +20,9 @@ public class PlayerController : MonoBehaviour
     {
         // This is to prevent clicking through the inventory UI
 
-        if (EventSystem.current.IsPointerOverGameObject())
+        /*if (EventSystem.current.IsPointerOverGameObject())
             return;
+        */
 
 
 
