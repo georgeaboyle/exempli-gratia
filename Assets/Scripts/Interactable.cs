@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public float radius = 3f;
+    // commenting out the radius. Since our game doesn't have a player character, I don't think we should have this.
+    // public float radius = 3f;
     public Transform interactionTransform;
 
     bool isFocus = false;
@@ -23,12 +24,15 @@ public class Interactable : MonoBehaviour
         if (isFocus && !hasInteracted)
         {
             float distance = Vector3.Distance(player.position, interactionTransform.position);
-            if (distance <= radius)
-            {
-                Interact();
-                Debug.Log("INTERACT");
-                hasInteracted = true;
-            }
+            Interact();
+            Debug.Log("INTERACT");
+            hasInteracted = true;
+            //if (distance <= radius)
+            //{
+            //    Interact();
+            //    Debug.Log("INTERACT");
+            //    hasInteracted = true;
+            //}
         }
     }
 
@@ -46,13 +50,16 @@ public class Interactable : MonoBehaviour
         hasInteracted = false;
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        if (interactionTransform == null)
-            interactionTransform = transform;
+    // I don't know if we need this at all now that we aren't using the radius...
+    // I'll add it back in if I find it's necessary
 
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(interactionTransform.position, radius);
+    //private void OnDrawGizmosSelected()
+    //{
+    //    if (interactionTransform == null)
+    //        interactionTransform = transform;
 
-    }
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawWireSphere(interactionTransform.position, radius);
+
+    //}
 }
