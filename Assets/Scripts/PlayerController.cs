@@ -31,59 +31,64 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            OnMouseClicked();
+            OnMouseLeftClicked();
         }
 
-       
+        if (Input.GetMouseButtonDown(1))
+        {
+            OnMouseRightClicked();
+        }
+
+
         //Brackeys put this here for movement, then copied the code later for interactable
         //I'm going to leave this in for now because my brain is breaking
         //I'll come back later and clean up this code (I promise)
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 1000, clickableMask))
-            {
-               // Vector3 mousePos = Input.mousePosition;
-               // mousePos = cam.ScreenToWorldPoint(mousePos);
-                Debug.Log("We hit" + hit.collider.name + " " + hit.point);
-               // Debug.DrawRay(transform.position, mousePos - transform.position, Color.blue);
+        //    if (Physics.Raycast(ray, out hit, 1000, clickableMask))
+        //    {
+        //        // Vector3 mousePos = Input.mousePosition;
+        //        // mousePos = cam.ScreenToWorldPoint(mousePos);
+        //        Debug.Log("We hit" + hit.collider.name + " " + hit.point);
+        //        // Debug.DrawRay(transform.position, mousePos - transform.position, Color.blue);
 
-                // Focus/select object
+        //        // Focus/select object
 
-                // Stop focusing any objects
-            }
-            if (Input.GetMouseButtonDown(1))
-            {
-                Ray ray1 = cam.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit1;
+        //        // Stop focusing any objects
+        //    }
+        //    if (Input.GetMouseButtonDown(1))
+        //    {
+        //        Ray ray1 = cam.ScreenPointToRay(Input.mousePosition);
+        //        RaycastHit hit1;
 
-                if (Physics.Raycast(ray1, out hit1, 100))
-                {
-                    
-                    // Check if we hit an interactable
-                    Interactable interactable = hit1.collider.GetComponent<Interactable>();
+        //        if (Physics.Raycast(ray1, out hit1, 100))
+        //        {
 
-                    // If we did hit an interactable, set it as our focus
-                    if (interactable != null)
-                    {
-                        SetFocus(interactable);
-                    }
+        //            // Check if we hit an interactable
+        //            Interactable interactable = hit1.collider.GetComponent<Interactable>();
 
-
-                    
+        //            // If we did hit an interactable, set it as our focus
+        //            if (interactable != null)
+        //            {
+        //                SetFocus(interactable);
+        //            }
 
 
-                }
 
-            }
-        }
+
+
+        //        }
+
+        //    }
+        //}
     }
 
 
-    void OnMouseClicked()
+    void OnMouseLeftClicked()
     {
         // Written by Elinda
         // Get the click position on screen
@@ -121,14 +126,34 @@ public class PlayerController : MonoBehaviour
         // Draw editor debugger to see ray in action
         Debug.DrawRay(clickOrigin, clickRay.direction * 50f, Color.yellow, 0.5f);
     }
-    
-    
-    
-    // Well, I'm not sure how these two are going to work out/interact because we currently don't have
-    // character movement. 
+
+    void OnMouseRightClicked()
+    {
+        Ray ray1 = cam.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit1;
+
+        if (Physics.Raycast(ray1, out hit1, 100))
+        {
+
+            // Check if we hit an interactable
+            Interactable interactable = hit1.collider.GetComponent<Interactable>();
+
+            // If we did hit an interactable, set it as our focus
+            if (interactable != null)
+            {
+                SetFocus(interactable);
+            }
 
 
-    //Nothing is "broken" and the game still runs with these lines, so I'll leave them until I know better
+
+
+
+        }
+    }
+    
+    
+    
+    
     void SetFocus (Interactable newFocus)
     {
         if (newFocus != focus)
