@@ -1,0 +1,66 @@
+
+newmtl Phong597347
+Kd  0.3490196 0.4509804 0.2784314
+Ks  0 0 0
+Ka  0 0 0
+d  1
+Ns  0
+illum 2
+
+
+
+
+newmtl Standard95893B
+Kd  0.5843138 0.5372549 0.2313726
+Ks  0 0 0
+Ka  0 0 0
+d  1
+Ns  0
+illum 2
+
+
+
+
+newmtl Glossy49A149
+Kd  0.2862745 0.6313726 0.2862745
+Ks  0 0 0
+Ka  0 0 0
+d  1
+Ns  0
+illum 2
+
+
+
+
+newmtl StandardEDB752
+Kd  0.9294118 0.7176471 0.3215686
+Ks  0 0 0
+Ka  0 0 0
+d  1
+Ns  0
+illum 2
+
+
+
+
+newmtl StandardCB6BA7
+Kd  0.7960784 0.4196078 0.654902
+Ks  0 0 0
+Ka  0 0 0
+d  1
+Ns  0
+illum 2
+
+
+
+
+newmtl Standard5C8E45
+Kd  0.3607843 0.5568628 0.2705882
+Ks  0 0 0
+Ka  0 0 0
+d  1
+Ns  0
+illum 2
+
+
+
