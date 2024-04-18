@@ -3,7 +3,37 @@ guid: effc844f2c4a1b048969f3e384d0ab7d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glossy49A149
+    second: {fileID: 2100000, guid: 8bf5b5f1c7a836647a2272d397ec3253, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Phong597347
+    second: {fileID: 2100000, guid: fe85e3b93944d1642ab27eff3a0ed0c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard5C8E45
+    second: {fileID: 2100000, guid: 4e424cd4c6956c54482f997b5333a346, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard95893B
+    second: {fileID: 2100000, guid: 5e287ed5e19b43e4680963d2553e2e3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StandardCB6BA7
+    second: {fileID: 2100000, guid: bfce9da39df18b04198c8b7ef974a111, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StandardEDB752
+    second: {fileID: 2100000, guid: 38344750387b6ca4fb857056781343b1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
