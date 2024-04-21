@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -105,14 +106,10 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(clickRay, out hit, 100f, interactMask))
         {
             print("Clicked on " + hit.transform.name);
-
-            // Do other logic with the object we clicked on
-            //RandomiseColor random = hit.transform.GetComponent<RandomiseColor>();
-
-            //if (random != null)
-            //{
-            //    random.Randomise();
-            //}
+            if (hit.transform.name == "Door 4")
+            {
+                ChangeScene();
+            }
         }
         else
         {
@@ -151,9 +148,6 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-    
-    
-    
     void SetFocus (Interactable newFocus)
     {
         if (newFocus != focus)
@@ -175,5 +169,18 @@ public class PlayerController : MonoBehaviour
         if (focus != null)
             focus.OnDefocused();
         focus = null;
+    }
+
+    void ChangeScene()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            SceneManager.LoadScene(2);
+        }
+        else
+        {
+            SceneManager.LoadScene(1);
+        }
+            
     }
 }
