@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 37671f1da83994743b2e6a52af7c4817
   - enabled: 1
-    path: Assets/Scenes/old Living Room.unity
-    guid: 6a411855960da6a4ab8cd5622fa7f5f0
+    path: Assets/Scenes/Living Room (new).unity
+    guid: 1b99bddaa2e33de40a49f9f03b4a5848
+  - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: af53bf79940d64b46aee0e333f082ca8
   m_configObjects: {}
