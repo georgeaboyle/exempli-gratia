@@ -58,12 +58,12 @@ public class ClickFromCamera3D : MonoBehaviour
             print("Clicked on " + hit.transform.name);
             
             // Do other logic with the object we clicked on
-            RandomiseColor random = hit.transform.GetComponent<RandomiseColor>();
+            //RandomiseColor random = hit.transform.GetComponent<RandomiseColor>();
 
-            if (random != null)
-            {
-                random.Randomise();
-            }
+            //if (random != null)
+            //{
+            //    random.Randomise();
+            //}
         }
         else
         {
