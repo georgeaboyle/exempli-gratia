@@ -10095,7 +10095,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753c598c24f0854479be921edecd665e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SMS: []
+  SMS:
+  - Hey, boo, don't forget you promised to make pizza for us tonight!
+  - And don't forget to finish up your project for school!
+  - You need to take a photo of a butterfly
+  - Text me back when you're done!
 --- !u!4 &1964973825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 137366525648811614, guid: 43a8c0c44d4744344b675dae27cabbcb, type: 3}
