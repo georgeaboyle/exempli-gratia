@@ -52,4 +52,23 @@ public class Inventory : MonoBehaviour
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
     }
+
+    //Adding this idea from Stack Exchange to try to make the list accessible from another class
+    public List<Item> GetList()
+    {
+        return items;
+    }
+
+    //Adding this idea from a friend of a friend who was trying to help me figure this out
+    public bool HasItem(string name)
+    {
+        foreach (Item item in items)
+        {
+            if (item.name == name)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

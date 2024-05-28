@@ -4,29 +4,41 @@ using UnityEngine;
 
 public class CheckForWater : Interactable
 {
-    public string reqItem = "WaterCan";
+    public string itemName = "WaterCan";
     private bool hasGrown = false;
     public GameObject lantana_iris_flower2;
 
     Inventory inventory = new Inventory();
 
 
-    public void GetList()
+
+
+    //public void TryGrow(Inventory inventory)
+    //{
+
+    //    if (inventory.HasItem("WaterCan"))
+    //    {
+    //        GrowFlower();
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("No water can available.");
+    //    }        
+    //}
+
+    public void TryGrow()
     {
-        List<item> calledList = Inventory.GetList();
 
-    }
-
-
-    public void TryGrow(Inventory inventory)
-    {
-        if (inventory.GetList())
+        if (Inventory.instance.HasItem("WaterCan"))
         {
             GrowFlower();
         }
+        else
+        {
+            Debug.Log("No water can available.");
+        }
     }
 
-    
 
     public void GrowFlower()
     {
@@ -50,6 +62,6 @@ public class CheckForWater : Interactable
 
         base.Interact();
 
-        ;
+        Debug.Log("Checking for water");
     }
 }
