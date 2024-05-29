@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4426107120416718128
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.667943
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.54
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.21309
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.410878
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.91169035
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -228.52
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      propertyPath: m_Name
+      value: WaterCan
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1250021489690649890}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1001928281703534}
+  m_SourcePrefab: {fileID: 100100000, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+--- !u!1 &3579756046233550945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+  m_PrefabInstance: {fileID: 4426107120416718128}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1250021489690649890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3579756046233550945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1929784387cdf354bb1cbc0c825245d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionTransform: {fileID: 4244090164688624347}
+  item: {fileID: 11400000, guid: 95d9117508fff144eb189a2f070f84f0, type: 2}
+--- !u!65 &1001928281703534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3579756046233550945}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.003, y: 0.003, z: 0.003}
+  m_Center: {x: 0, y: 0.002, z: 0}
+--- !u!4 &4244090164688624347 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7f13c12ec200fe2498d301cb62f795dd, type: 3}
+  m_PrefabInstance: {fileID: 4426107120416718128}
+  m_PrefabAsset: {fileID: 0}
