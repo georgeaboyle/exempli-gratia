@@ -23,7 +23,7 @@ public class CheckForWater : Interactable
     //    else
     //    {
     //        Debug.Log("No water can available.");
-    //    }        
+    //    }
     //}
 
     public void TryGrow()
