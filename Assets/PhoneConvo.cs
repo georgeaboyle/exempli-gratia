@@ -32,7 +32,7 @@ public class PhoneConvo : MonoBehaviour
     }
     void Start()
     {
-        ClearText();
+        //ClearText();
         HideDialogueDisplay();
     }
 
@@ -78,18 +78,18 @@ public class PhoneConvo : MonoBehaviour
     private void EndDialogue()
     {
         HideDialogueDisplay();
-        ClearText();
+        //ClearText();
         dialogueProgress = 0;
     }
 
-    // this method actuall does the work of emptying the text area.
+    // this method actually does the work of emptying the text area.
     // I may not want this as my messages are supposed to stay on screen as text messages
     // will revisit if necessary
-    private void ClearText()
-    {
-        textDisplay.text = "";
-        dialogueLines = null;
-    }
+    //private void ClearText()
+    //{
+    //    textDisplay.text = "";
+    //    dialogueLines = null;
+    //}
 
     // this method tells the canvas to appear when the dialogue is activated
     private void ShowDialogueDisplay()

@@ -96,11 +96,6 @@ public class PlayerController : MonoBehaviour
             {
                 SetFocus(interactable);
             }
-
-
-
-
-
         }
     }
     

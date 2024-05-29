@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    // commenting out the radius. Since our game doesn't have a player character, I don't think we should have this.
-    // public float radius = 3f;
     public Transform interactionTransform;
 
     bool isFocus = false;
@@ -17,6 +15,7 @@ public class Interactable : MonoBehaviour
         // This is why it is "virtual"
         //base.Interact():
         //TryGrow();
+        
         Debug.Log("I say, I say, I'm Interacting with " + transform.name);
     }
 
@@ -24,16 +23,9 @@ public class Interactable : MonoBehaviour
     {
         if (isFocus && !hasInteracted)
         {
-            // float distance = Vector3.Distance(player.position, interactionTransform.position);
             Interact();
             hasInteracted = true;
             Debug.Log("INTERACT");
-            //if (distance <= radius)
-            //{
-            //    Interact();
-            //    Debug.Log("INTERACT");
-            //    hasInteracted = true;
-            //}
         }
     }
 
@@ -58,9 +50,5 @@ public class Interactable : MonoBehaviour
     {
         if (interactionTransform == null)
             interactionTransform = transform;
-
-        //gizmos.color = color.yellow;
-        //gizmos.drawwiresphere(interactionTransform.position, radius);
-
     }
 }
