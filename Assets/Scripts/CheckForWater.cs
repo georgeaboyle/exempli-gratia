@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class CheckForWater : Interactable
 {
-    public string itemName = "WaterCan";
+    public string itemName;
     private bool hasGrown = false;
     public GameObject lantana_iris_flower2;
 
     Inventory inventory = new Inventory();
 
 
-
+    public void OnMouseDown()
+    {
+        TryGrow();
+        Debug.Log("TryGrow runs OnMouseDown");
+    }
 
     //public void TryGrow(Inventory inventory)
     //{
@@ -30,9 +34,9 @@ public class CheckForWater : Interactable
     {
 
         //if (Inventory.instance.HasItem("WaterCan"))
-        if (Inventory.instance.HasItem("WaterCan"))
+        if (Inventory.instance.HasItem(itemName))
         {
-            hasGrown = true;
+            Debug.Log("Checked inventory for waterCan");
             GrowFlower();
         }
         else
