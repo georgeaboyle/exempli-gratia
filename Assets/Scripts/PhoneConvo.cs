@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ public class PhoneConvo : MonoBehaviour
     [Header("Public Variables")]
     public Canvas dialogueDisplay;
     [Tooltip("Your dialogue text goes here")]
-    public Text textDisplay;
+    public TextMeshProUGUI textDisplay;
 
     public Button cont;
 
@@ -32,7 +33,7 @@ public class PhoneConvo : MonoBehaviour
     }
     void Start()
     {
-        //ClearText();
+        ClearText();
         HideDialogueDisplay();
     }
 
@@ -40,12 +41,15 @@ public class PhoneConvo : MonoBehaviour
     // other methods are doing the lifting while this does the checks to see if those methods should run at all
     public void StartDialogue(string[] lines)
     {
+        Debug.Log("Starting Dialogue");
         if (lines.Length < 1)
         {
+            Debug.Log("lines < 1");
             return;
         }
         else if (dialogueLines != null)
         {
+            Debug.Log("dialogue != null");
             return;
         }
 
@@ -68,7 +72,7 @@ public class PhoneConvo : MonoBehaviour
     }
 
     // method to continue on click
-    private void AdvanceDialogue()
+    public void AdvanceDialogue()
     {
         textDisplay.text = dialogueLines[dialogueProgress];
         dialogueProgress++;
@@ -78,22 +82,23 @@ public class PhoneConvo : MonoBehaviour
     private void EndDialogue()
     {
         HideDialogueDisplay();
-        //ClearText();
+        ClearText();
         dialogueProgress = 0;
     }
 
     // this method actually does the work of emptying the text area.
     // I may not want this as my messages are supposed to stay on screen as text messages
     // will revisit if necessary
-    //private void ClearText()
-    //{
-    //    textDisplay.text = "";
-    //    dialogueLines = null;
-    //}
+    private void ClearText()
+    {
+        textDisplay.text = "";
+        dialogueLines = null;
+    }
 
     // this method tells the canvas to appear when the dialogue is activated
     private void ShowDialogueDisplay()
     {
+        Debug.Log("Show dialogue display");
         dialogueDisplay.gameObject.SetActive(true);
     }
 

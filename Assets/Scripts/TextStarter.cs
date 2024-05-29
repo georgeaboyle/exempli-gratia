@@ -9,6 +9,7 @@ public class TextStarter : MonoBehaviour
 
     private void OnMouseDown()
     {
-       PhoneConvo.instance.StartDialogue(SMS);
+        Debug.Log("clicked on a phone");
+        PhoneConvo.instance.StartDialogue(SMS);
     }
 }
