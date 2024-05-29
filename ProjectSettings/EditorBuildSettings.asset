@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 37671f1da83994743b2e6a52af7c4817
   - enabled: 1
-    path: Assets/Scenes/Living Room.unity
+    path: Assets/Scenes/Living Room (new).unity
     guid: 1b99bddaa2e33de40a49f9f03b4a5848
   - enabled: 1
     path: Assets/Scenes/Kitchen.unity
