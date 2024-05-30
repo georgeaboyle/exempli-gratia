@@ -10,8 +10,6 @@ public class InventoryUI : MonoBehaviour
 
     InventorySlot[] slots;
 
-
-
     void Start()
     {
         inventory = Inventory.instance;

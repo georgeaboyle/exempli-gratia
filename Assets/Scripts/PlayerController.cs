@@ -13,26 +13,9 @@ public class PlayerController : MonoBehaviour
 
     Camera cam;
 
-    public static PlayerController instance;
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-
-            // Protect entire game object from being destroyed. This will keep ALL components on the game object
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        Camera cam;
         cam = Camera.main;
     }
 
