@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
 
     public int space = 20;
 
-    //public List<Item> items = new List<Item>();
+    
     public List<Item> items = new List<Item>();
 
     public bool Add (Item item)
@@ -54,13 +54,13 @@ public class Inventory : MonoBehaviour
             onItemChangedCallback.Invoke();
     }
 
-    //Adding this idea from Stack Exchange to try to make the list accessible from another class
+    
     public List<Item> GetList()
     {
         return items;
     }
 
-    //Adding this idea from a friend of a friend who was trying to help me figure this out
+    
     public bool HasItem(string name)
     {
         foreach (Item item in items)
