@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50488f1244eb81746bfc51d4653239e2, type: 3}
   m_Name: Camera
   m_EditorClassIdentifier: 
-  name: New Item
+  name: Camera
   icon: {fileID: 0}
   isDefaultItem: 0

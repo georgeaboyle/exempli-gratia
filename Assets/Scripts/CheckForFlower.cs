@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckForFlower : Interactable
+public class CheckForCamera : Interactable
 {
     public string itemName2;
     private bool hasShot = false;
@@ -14,21 +14,19 @@ public class CheckForFlower : Interactable
     public void OnMouseDown()
     {
         TryPhoto();
-        Debug.Log("TryGrow runs OnMouseDown");
+        Debug.Log("TryPhoto runs OnMouseDown");
     }
 
     public void TryPhoto()
     {
-
-        //if (Inventory.instance.HasItem("WaterCan"))
         if (Inventory.instance.HasItem(itemName2))
         {
-            Debug.Log("Checked inventory for waterCan");
+            Debug.Log("Checked inventory for camera");
             TakePhoto();
         }
         else
         {
-            Debug.Log("No water can available.");
+            Debug.Log("No camera available.");
         }
     }
 
@@ -51,7 +49,6 @@ public class CheckForFlower : Interactable
 
     public override void Interact()
     {
-        // This is where we get the chance to override the Interact method in the Interactable script
 
         base.Interact();
 

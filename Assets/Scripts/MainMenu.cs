@@ -9,12 +9,4 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
-    // For full release if needed
-
-    // public void QuitGame ()
-    // {
-    //Application.Quit();
-
-    //}
 }
