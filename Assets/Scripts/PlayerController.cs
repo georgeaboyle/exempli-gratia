@@ -6,15 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    // Brackeys
-    public LayerMask clickableMask;
-    // Elinda 
+
     public LayerMask interactMask;
 
     public Interactable focus;
 
     Camera cam;
-    // Start is called before the first frame update
 
     public static PlayerController instance;
     private void Awake()
@@ -31,20 +28,17 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    // Start is called before the first frame update
     void Start()
     {
+        Camera cam;
         cam = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // I think this is Brackeys' code? Not sure why it's commented out... May implement later if needed. 
-        // This is to prevent clicking through the inventory UI
-
-        /*if (EventSystem.current.IsPointerOverGameObject())
-            return;
-        */
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -55,47 +49,6 @@ public class PlayerController : MonoBehaviour
         {
             OnMouseRightClicked();
         }
-
-
-        //Brackeys put this here for movement, then copied the code later for interactable
-        //I'm going to leave this in for now because my brain is breaking
-        //I'll come back later and clean up this code (I promise)
-
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        //    RaycastHit hit;
-
-        //    if (Physics.Raycast(ray, out hit, 1000, clickableMask))
-        //    {
-        //        // Vector3 mousePos = Input.mousePosition;
-        //        // mousePos = cam.ScreenToWorldPoint(mousePos);
-        //        Debug.Log("We hit" + hit.collider.name + " " + hit.point);
-        //        // Debug.DrawRay(transform.position, mousePos - transform.position, Color.blue);
-
-        //        // Focus/select object
-
-        //        // Stop focusing any objects
-        //    }
-        //    if (Input.GetMouseButtonDown(1))
-        //    {
-        //        Ray ray1 = cam.ScreenPointToRay(Input.mousePosition);
-        //        RaycastHit hit1;
-
-        //        if (Physics.Raycast(ray1, out hit1, 100))
-        //        {
-
-        //            // Check if we hit an interactable
-        //            Interactable interactable = hit1.collider.GetComponent<Interactable>();
-
-        //            // If we did hit an interactable, set it as our focus
-        //            if (interactable != null)
-        //            {
-        //                SetFocus(interactable);
-        //            }
-        //        }
-        //    }
-        //}
     }
 
     void OnMouseLeftClicked()
@@ -125,7 +78,6 @@ public class PlayerController : MonoBehaviour
         }
 
         // Project the click screen position to in-game world position
-        // "cam" not "mainCamera" as in Elinda's original code. Used Brackeys' identifier since it's also used in his script later on.
         Vector3 clickOrigin = cam.ScreenToWorldPoint(new Vector3(clickPosition.x, clickPosition.y, 0f));
 
         // Draw editor debugger to see ray in action
