@@ -6,14 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    // Brackeys
-    public LayerMask clickableMask;
-    // Elinda
+
     public LayerMask interactMask;
 
     public Interactable focus;
 
     Camera cam;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,10 +34,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     void OnMouseLeftClicked()
     {
-        // Written by Elinda
         // Get the click position on screen
         Vector3 clickPosition = Input.mousePosition;
 
@@ -64,7 +61,6 @@ public class PlayerController : MonoBehaviour
         }
 
         // Project the click screen position to in-game world position
-        // "cam" not "mainCamera" as in Elinda's original code. Used Brackeys' identifier since it's also used in his script later on.
         Vector3 clickOrigin = cam.ScreenToWorldPoint(new Vector3(clickPosition.x, clickPosition.y, 0f));
 
         // Draw editor debugger to see ray in action
@@ -78,7 +74,6 @@ public class PlayerController : MonoBehaviour
 
         if (Physics.Raycast(ray1, out hit1, 100))
         {
-
             // Check if we hit an interactable
             Interactable interactable = hit1.collider.GetComponent<Interactable>();
 
@@ -87,11 +82,6 @@ public class PlayerController : MonoBehaviour
             {
                 SetFocus(interactable);
             }
-
-
-
-
-
         }
     }
     
@@ -101,13 +91,9 @@ public class PlayerController : MonoBehaviour
         {
             if (focus != null)
                 focus.OnDefocused();
-
-
+            
             focus = newFocus;
         }
-
-
-        
         newFocus.OnFocused(transform);
     }
 
@@ -128,6 +114,5 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
-            
     }
 }
