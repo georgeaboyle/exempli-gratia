@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: WaterCan
   m_EditorClassIdentifier: 
   name: WaterCan
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 4cbfb0f4093f33748b9c911b0d0ff79d, type: 3}
   isDefaultItem: 0
