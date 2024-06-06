@@ -3177,7 +3177,7 @@ GameObject:
   - component: {fileID: 1002563728}
   - component: {fileID: 1002563730}
   m_Layer: 0
-  m_Name: CameraClicker
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3214,6 +3214,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   focus: {fileID: 0}
+  clickSound: {fileID: 8300000, guid: cda25859906fb4149a4dc82962b75037, type: 3}
 --- !u!1001 &1183656097
 PrefabInstance:
   m_ObjectHideFlags: 0
