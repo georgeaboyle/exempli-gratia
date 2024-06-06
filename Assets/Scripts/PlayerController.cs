@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     public Interactable focus;
 
+    public AudioClip clickSound;
+
     Camera cam;
 
     // Start is called before the first frame update
@@ -50,6 +52,7 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(clickRay, out hit, 100f, interactMask))
         {
             print("Clicked on " + hit.transform.name);
+            AudioSource.PlayClipAtPoint(clickSound, transform.position);
             if (hit.transform.name == "Door 4")
             {
                 ChangeScene();
@@ -64,7 +67,7 @@ public class PlayerController : MonoBehaviour
         Vector3 clickOrigin = cam.ScreenToWorldPoint(new Vector3(clickPosition.x, clickPosition.y, 0f));
 
         // Draw editor debugger to see ray in action
-        Debug.DrawRay(clickOrigin, clickRay.direction * 50f, Color.yellow, 0.5f);
+        // Debug.DrawRay(clickOrigin, clickRay.direction * 50f, Color.yellow, 0.5f);
     }
 
     void OnMouseRightClicked()

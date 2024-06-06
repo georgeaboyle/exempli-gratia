@@ -7,6 +7,7 @@ public class CheckForWater : Interactable
     public string itemName;
     private bool hasGrown = false;
     public GameObject lantana_iris_flower2;
+    public AudioClip plantSound;
 
     Inventory inventory = new Inventory();
 
@@ -54,6 +55,7 @@ public class CheckForWater : Interactable
         if(lantana_iris_flower2 != null)
         {
             lantana_iris_flower2.SetActive(true);
+            AudioSource.PlayClipAtPoint(plantSound, transform.position);
         }
 
         else

@@ -7,6 +7,7 @@ public class CheckForCamera : Interactable
     public string itemName2;
     private bool hasShot = false;
     public GameObject Photo;
+    public AudioClip cameraSound;
 
     Inventory inventory = new Inventory();
 
@@ -35,6 +36,7 @@ public class CheckForCamera : Interactable
     {
         hasShot = true;
         Debug.Log("Take that photo!");
+        AudioSource.PlayClipAtPoint(cameraSound, transform.position);
 
         if (Photo != null)
         {

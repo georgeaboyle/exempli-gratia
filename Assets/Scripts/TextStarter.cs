@@ -6,10 +6,12 @@ public class TextStarter : MonoBehaviour
 {
     [TextArea(5, 3)]
     public string[] SMS;
+    public AudioClip phoneSound;
 
     private void OnMouseDown()
     {
-        Debug.Log("clicked on a phone");
+        Debug.Log("clicked on the smartphone");
+        AudioSource.PlayClipAtPoint(phoneSound, transform.position);
         PhoneConvo.instance.StartDialogue(SMS);
     }
 }
