@@ -8641,13 +8641,17 @@ PrefabInstance:
       propertyPath: plantSound
       value: 
       objectReference: {fileID: 8300000, guid: 03c8cdd2c0a5a7448b502a76a8c82437, type: 3}
+    - target: {fileID: 5397814707907074873, guid: faef9dcdc17f78c4abf9e001af9a82b2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6815775233425230085, guid: faef9dcdc17f78c4abf9e001af9a82b2, type: 3}
       propertyPath: m_Name
       value: LantanaIrisFlower
       objectReference: {fileID: 0}
     - target: {fileID: 6815775233425230085, guid: faef9dcdc17f78c4abf9e001af9a82b2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
