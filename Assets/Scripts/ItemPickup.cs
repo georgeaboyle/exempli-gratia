@@ -5,6 +5,15 @@ public class ItemPickup : Interactable
     public Item item;
     public AudioClip itemPickupSound;
 
+    private void Start()
+    {
+        if (Inventory.instance.HasItem(item.name))
+        {
+            print("Already have " + item.name);
+            Destroy(gameObject);
+        }
+    }
+
     public override void Interact()
     {
         // This is where we get the chance to override the Interact method in the Interactable script

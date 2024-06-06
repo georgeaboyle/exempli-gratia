@@ -146,8 +146,9 @@ GameObject:
   - component: {fileID: 27411001}
   - component: {fileID: 27411000}
   - component: {fileID: 27410999}
+  - component: {fileID: 27411004}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas-InventoryManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,6 +252,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &27411004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27410998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3985bd57c4a32f4b872529e4a88c28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  space: 20
+  items: []
 --- !u!1001 &28384112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4335,7 +4350,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.53248835, y: 0.42435455, z: 0.24858332}
   m_Center: {x: 0.078644514, y: 0.15186763, z: -0.08148074}
@@ -9563,9 +9578,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1815328022}
   - component: {fileID: 1815328021}
-  - component: {fileID: 1815328023}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: PlayerController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9603,20 +9617,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1815328023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815328020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3985bd57c4a32f4b872529e4a88c28a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space: 20
-  items: []
 --- !u!224 &1817065705 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 703422292165773785, guid: 215a8e81660db9e4d9086a8ae0fcf2f3, type: 3}

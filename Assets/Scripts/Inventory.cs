@@ -10,12 +10,16 @@ public class Inventory : MonoBehaviour
 
     void Awake()
     {
-        if (instance != null)
+        if (instance != null && instance != this)
         {
-            Debug.LogWarning("More than one instance of Inventory found!!!!");
+            //Debug.LogWarning("More than one instance of Inventory found!!!!");
+            Debug.LogWarning("Removing duplicate Inventory instance.");
+            Destroy(gameObject);
             return;
         }
+
         instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     #endregion
@@ -66,6 +70,19 @@ public class Inventory : MonoBehaviour
         foreach (Item item in items)
         {
             if (item.name == name)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Using reference to Item object instead of string name
+    public bool HasItem(Item itemToCheck)
+    {
+        foreach (Item item in items)
+        {
+            if (item == itemToCheck)
             {
                 return true;
             }
