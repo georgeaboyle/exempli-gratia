@@ -3,6 +3,7 @@ using UnityEngine;
 public class ItemPickup : Interactable
 {
     public Item item;
+    public AudioClip itemSound;
 
     public override void Interact()
     {
@@ -20,6 +21,7 @@ public class ItemPickup : Interactable
         // add to inventory
         bool wasPickedUp = Inventory.instance.Add(item);
         if (wasPickedUp)
+            AudioSource.PlayClipAtPoint(itemSound, transform.position);
             Destroy(gameObject);
     }
 }

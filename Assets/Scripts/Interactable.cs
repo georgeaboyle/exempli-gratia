@@ -14,7 +14,7 @@ public class Interactable : MonoBehaviour
         // This method is meant to be overridden by scripts in other places
         // This is why it is "virtual"
 
-        Debug.Log("I say, I say, I'm Interacting with " + transform.name);
+        Debug.Log("I'm interacting with " + transform.name);
     }
 
     void Update()
@@ -41,8 +41,6 @@ public class Interactable : MonoBehaviour
         player = null;
         hasInteracted = false;
     }
-
-   
 
     private void OnDrawGizmosSelected ()
     {
