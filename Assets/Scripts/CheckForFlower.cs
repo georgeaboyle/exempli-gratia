@@ -11,7 +11,6 @@ public class CheckForCamera : Interactable
 
     Inventory inventory = new Inventory();
 
-
     public void OnMouseDown()
     {
         TryPhoto();
@@ -41,8 +40,7 @@ public class CheckForCamera : Interactable
         if (Photo != null)
         {
             Photo.SetActive(true);
-        }
-
+        } 
         else
         {
             Debug.LogWarning("No flower present.");
@@ -51,9 +49,7 @@ public class CheckForCamera : Interactable
 
     public override void Interact()
     {
-
         base.Interact();
-
         Debug.Log("Checking for flower");
     }
 }
